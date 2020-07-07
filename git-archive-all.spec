@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : git-archive-all
 Version  : 20.02.11
-Release  : 1
+Release  : 2
 URL      : /insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.02.11.zip
 Source0  : /insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.02.11.zip
 Summary  : Archive git repository with its submodules.
@@ -14,7 +14,9 @@ License  : GPL-2.0
 Requires: git-archive-all-bin = %{version}-%{release}
 Requires: git-archive-all-python = %{version}-%{release}
 Requires: git-archive-all-python3 = %{version}-%{release}
+Requires: git
 BuildRequires : buildreq-distutils3
+BuildRequires : git
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -75,7 +77,7 @@ unset http_proxy
 unset https_proxy
 unset no_proxy
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1594142085
+export SOURCE_DATE_EPOCH=1594142144
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
