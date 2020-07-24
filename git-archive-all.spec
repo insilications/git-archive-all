@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : git-archive-all
-Version  : 20.02.11
-Release  : 4
-URL      : /insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.02.11.zip
-Source0  : /insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.02.11.zip
+Version  : 20.07.23
+Release  : 5
+URL      : file:///insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.07.23.zip
+Source0  : file:///insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.07.23.zip
 Summary  : Archive git repository with its submodules.
 Group    : Development/Tools
 License  : GPL-2.0
@@ -22,7 +22,6 @@ BuildRequires : python3-core
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
-Patch1: 0001-Add-ignore-gitattr-to-ignore-.gitattributes.patch
 
 %description
 .. image:: https://img.shields.io/pypi/v/git-archive-all.svg
@@ -72,16 +71,15 @@ python3 components for the git-archive-all package.
 
 
 %prep
-%setup -q -n git-archive-all-20.02.11
-cd %{_builddir}/git-archive-all-20.02.11
-%patch1 -p1
+%setup -q -n git-archive-all-20.07.23
+cd %{_builddir}/git-archive-all-20.07.23
 
 %build
 unset http_proxy
 unset https_proxy
 unset no_proxy
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1595286427
+export SOURCE_DATE_EPOCH=1595558504
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
