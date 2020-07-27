@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : git-archive-all
 Version  : 20.07.23
-Release  : 6
+Release  : 7
 URL      : file:///insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.07.23.zip
 Source0  : file:///insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.07.23.zip
 Summary  : Archive git repository with its submodules.
@@ -80,7 +80,7 @@ unset http_proxy
 unset https_proxy
 unset no_proxy
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1595843147
+export SOURCE_DATE_EPOCH=1595843184
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
