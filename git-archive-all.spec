@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : git-archive-all
 Version  : 20.07.23
-Release  : 5
+Release  : 6
 URL      : file:///insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.07.23.zip
 Source0  : file:///insilications/build/clearlinux/packages/git-archive-all/git-archive-all-20.07.23.zip
 Summary  : Archive git repository with its submodules.
@@ -17,6 +17,7 @@ Requires: git-archive-all-python3 = %{version}-%{release}
 Requires: git
 Requires: python3-core
 BuildRequires : buildreq-distutils3
+BuildRequires : findutils
 BuildRequires : git
 BuildRequires : python3-core
 # Suppress stripping binaries
@@ -79,7 +80,7 @@ unset http_proxy
 unset https_proxy
 unset no_proxy
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1595558504
+export SOURCE_DATE_EPOCH=1595843147
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
